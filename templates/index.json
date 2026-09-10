@@ -38,7 +38,7 @@
         "delivery": {"type": "item", "settings": {"icon": "delivery", "heading": "Delivery across Lebanon", "text": "Order from anywhere in Lebanon."}}
       },
       "block_order": ["payment", "delivery"],
-      "settings": {"color_scheme": "scheme-5"}
+      "settings": {"color_scheme": "scheme-4"}
     },
     "featured-product": {
       "type": "featured-product",
