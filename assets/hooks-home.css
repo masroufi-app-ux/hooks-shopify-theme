@@ -82,9 +82,26 @@ html {
   text-shadow: 0 0.1rem 1.2rem rgba(0, 0, 0, 0.3);
 }
 
+.banner__content {
+  justify-content: center !important;
+}
+
 .banner__box {
+  width: 100% !important;
   max-width: 66rem !important;
+  margin-inline: auto !important;
   align-items: center !important;
+  text-align: center !important;
+}
+
+.banner__box > * {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.banner__box .banner__text,
+.banner__box .banner__text p {
+  width: 100%;
   text-align: center !important;
 }
 
@@ -105,8 +122,10 @@ html {
 }
 
 .banner__buttons {
-  margin-top: 3rem !important;
+  width: 100%;
+  margin: 3rem auto 0 !important;
   justify-content: center !important;
+  align-items: center !important;
 }
 
 .banner__buttons .button::before,
@@ -460,8 +479,13 @@ html {
 }
 
 @media screen and (min-width: 990px) {
+  .banner__content {
+    justify-content: center !important;
+  }
+
   .banner__box {
     max-width: 110rem !important;
+    margin-inline: auto !important;
   }
 
   .banner__heading {
