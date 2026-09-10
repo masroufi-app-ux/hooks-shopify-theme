@@ -134,10 +134,21 @@ html {
   box-shadow: none !important;
 }
 
+.banner__buttons .button--secondary {
+  border: 0.1rem solid #ffffff !important;
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+.banner__buttons .button--secondary:hover {
+  border-color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
 .button {
   min-height: 5rem;
   padding-inline: 3rem;
-  border-radius: 2rem !important;
+  border-radius: 1rem !important;
   font-weight: 700;
   letter-spacing: 0.02em;
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
@@ -155,7 +166,7 @@ html {
 .shopify-payment-button__button--unbranded::before,
 .shopify-payment-button__button--unbranded::after,
 .shopify-payment-button__button--unbranded:hover::after {
-  border-radius: 2rem !important;
+  border-radius: 1rem !important;
   box-shadow: none !important;
 }
 
