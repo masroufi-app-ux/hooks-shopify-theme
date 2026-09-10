@@ -459,12 +459,24 @@
                     product_form_id: product_form_id
                   %}
                 {%- when 'buy_buttons' -%}
-                  {%- render 'buy-buttons',
-                    block: block,
-                    product: product,
-                    product_form_id: product_form_id,
-                    section_id: section.id
-                  -%}
+                  <div class="hooks-product-actions">
+                    {%- render 'buy-buttons',
+                      block: block,
+                      product: product,
+                      product_form_id: product_form_id,
+                      section_id: section.id
+                    -%}
+                    <a
+                      {% if product == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ product.url }}"
+                      {% endif %}
+                      class="button button--secondary hooks-product-details-button"
+                    >
+                      View details
+                    </a>
+                  </div>
                 {%- when 'custom_liquid' -%}
                   {{ block.settings.custom_liquid }}
                 {%- when 'rating' -%}
@@ -509,17 +521,6 @@
                   {% render 'icon-with-text', block: block %}
               {%- endcase -%}
             {%- endfor -%}
-            <a
-              {% if product == blank %}
-                role="link" aria-disabled="true"
-              {% else %}
-                href="{{ product.url }}"
-              {% endif %}
-              class="link product__view-details animate-arrow"
-            >
-              {{ 'products.product.view_full_details' | t }}
-              {{- 'icon-arrow.svg' | inline_asset_content -}}
-            </a>
           </section>
         </div>
       </div>
