@@ -42,6 +42,7 @@
   {%- endstyle -%}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
+  <script src="{{ 'hooks-product-gallery.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
 
@@ -76,7 +77,52 @@
       <div class="featured-product product product--{{ section.settings.media_size }} grid grid--1-col gradient color-{{ section.settings.color_scheme }} product--{{ section.settings.media_position }}{% if section.settings.secondary_background == false %} isolate{% endif %} {% if product.media.size > 0 or section.settings.product == blank %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
         <div class="grid__item product__media-wrapper">
           {%- unless placeholder -%}
-            {% render 'product-media-gallery', product: product, variant_images: variant_images, limit: 1 %}
+            <hooks-product-gallery class="hooks-product-gallery" aria-label="{{ product.title | escape }} images">
+              <div class="hooks-product-gallery__viewport">
+                {%- for image in product.images -%}
+                  <div
+                    class="hooks-product-gallery__slide{% if forloop.first %} is-active{% endif %}"
+                    data-gallery-slide
+                    data-index="{{ forloop.index0 }}"
+                    {% unless forloop.first %}hidden{% endunless %}
+                  >
+                    {{
+                      image
+                      | image_url: width: 1400
+                      | image_tag:
+                        loading: 'lazy',
+                        sizes: '(min-width: 990px) 50vw, 100vw',
+                        widths: '480, 720, 960, 1200, 1400',
+                        alt: image.alt
+                    }}
+                  </div>
+                {%- endfor -%}
+
+                {%- if product.images.size > 1 -%}
+                  <button class="hooks-gallery-arrow hooks-gallery-arrow--previous" type="button" data-gallery-previous aria-label="Previous product image">
+                    <span aria-hidden="true">‹</span>
+                  </button>
+                  <button class="hooks-gallery-arrow hooks-gallery-arrow--next" type="button" data-gallery-next aria-label="Next product image">
+                    <span aria-hidden="true">›</span>
+                  </button>
+                {%- endif -%}
+              </div>
+
+              {%- if product.images.size > 1 -%}
+                <div class="hooks-gallery-dots" role="group" aria-label="Choose product image">
+                  {%- for image in product.images -%}
+                    <button
+                      type="button"
+                      class="hooks-gallery-dot{% if forloop.first %} is-active{% endif %}"
+                      data-gallery-dot
+                      data-index="{{ forloop.index0 }}"
+                      aria-label="Show product image {{ forloop.index }} of {{ product.images.size }}"
+                      aria-current="{% if forloop.first %}true{% else %}false{% endif %}"
+                    ></button>
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+            </hooks-product-gallery>
           {%- else -%}
             <div class="product__media-item">
               <div
