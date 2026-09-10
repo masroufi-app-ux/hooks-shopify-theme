@@ -472,6 +472,10 @@ html {
   color: rgb(var(--color-button-text));
 }
 
+.featured-product .share-button {
+  display: none !important;
+}
+
 .hooks-product-actions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -565,8 +569,8 @@ html {
 
   .featured-product .product__info-container {
     width: 100%;
-    max-width: none !important;
-    margin: 0 !important;
+    max-width: 44rem !important;
+    margin: 0 auto !important;
     padding: 0 !important;
     border: 0 !important;
     border-radius: 0 !important;
