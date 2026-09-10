@@ -75,6 +75,8 @@
 
 .banner__box {
   max-width: 66rem !important;
+  align-items: center !important;
+  text-align: center !important;
 }
 
 .banner__heading {
@@ -87,13 +89,15 @@
 
 .banner__text {
   max-width: 54rem;
-  margin-top: 2rem !important;
+  margin: 2rem auto 0 !important;
   font-size: clamp(1.6rem, 1.8vw, 1.95rem);
   line-height: 1.6;
+  text-align: center !important;
 }
 
 .banner__buttons {
   margin-top: 3rem !important;
+  justify-content: center !important;
 }
 
 .banner__buttons .button::before,
