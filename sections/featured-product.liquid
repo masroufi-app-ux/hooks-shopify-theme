@@ -142,7 +142,6 @@
             data-section="{{ section.id }}"
             data-url="{{ product.url }}"
           >
-            <p class="hooks-product-eyebrow">Made for everyday comfort</p>
             {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
             {%- for block in section.blocks -%}
@@ -466,16 +465,6 @@
                     product_form_id: product_form_id,
                     section_id: section.id
                   -%}
-                  <div class="hooks-product-assurance" aria-label="Ordering information">
-                    <span>
-                      <strong>Cash on delivery</strong>
-                      Pay when it arrives
-                    </span>
-                    <span>
-                      <strong>Across Lebanon</strong>
-                      Nationwide delivery
-                    </span>
-                  </div>
                 {%- when 'custom_liquid' -%}
                   {{ block.settings.custom_liquid }}
                 {%- when 'rating' -%}
