@@ -8,7 +8,7 @@
         "buttons_CFLk8n": {"type": "buttons", "settings": {"button_label_1": "See why it works", "button_link_1": "#hooks-how-it-works", "button_style_secondary_1": false, "button_label_2": "Shop Hooks", "button_link_2": "#shopify-section-featured-product", "button_style_secondary_2": true}}
       },
       "block_order": ["heading_M4hXgG", "text_j3BNwP", "buttons_CFLk8n"],
-      "settings": {"image": "shopify://shop_images/Image1.png", "image_overlay_opacity": 38, "image_height": "large", "image_behavior": "zoom-in", "desktop_content_position": "middle-left", "desktop_content_alignment": "left", "show_text_box": false, "color_scheme": "scheme-image-banner-brown-button", "stack_images_on_mobile": false, "mobile_content_alignment": "left", "show_text_below": false}
+      "settings": {"image": "shopify://shop_images/Image1.png", "image_overlay_opacity": 40, "image_height": "large", "image_behavior": "zoom-in", "desktop_content_position": "middle-left", "desktop_content_alignment": "left", "show_text_box": false, "color_scheme": "scheme-image-banner-brown-button", "stack_images_on_mobile": false, "mobile_content_alignment": "left", "show_text_below": false}
     },
     "hooks-benefits": {
       "type": "hooks-benefits",
