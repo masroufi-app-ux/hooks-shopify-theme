@@ -1,0 +1,33 @@
+{
+  "sections": {
+    "main": {
+      "type": "hooks-about-page",
+      "blocks": {
+        "value_simple": {
+          "type": "value",
+          "settings": {
+            "heading": "Simple by design",
+            "text": "One useful product with a clear purpose: everyday comfort without a front buckle."
+          }
+        },
+        "value_comfort": {
+          "type": "value",
+          "settings": {
+            "heading": "Made for everyday wear",
+            "text": "Flexible and adjustable, so it can move with you throughout the day."
+          }
+        },
+        "value_local": {
+          "type": "value",
+          "settings": {
+            "heading": "Easy to order",
+            "text": "Delivery across Lebanon with the convenience of cash on delivery."
+          }
+        }
+      },
+      "block_order": ["value_simple", "value_comfort", "value_local"],
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}
