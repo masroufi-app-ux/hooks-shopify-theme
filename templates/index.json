@@ -47,10 +47,9 @@
         "price": {"type": "price", "settings": {}},
         "text": {"type": "text", "settings": {"text": "A flexible, adjustable belt that keeps your waistband secure without a buckle at the front.", "text_style": "subtitle"}},
         "variant_picker": {"type": "variant_picker", "settings": {"picker_type": "button", "swatch_shape": "circle"}},
-        "buy_buttons": {"type": "buy_buttons", "settings": {"show_dynamic_checkout": false, "show_gift_card_recipient": true}},
-        "share": {"type": "share", "settings": {"share_label": "Share"}}
+        "buy_buttons": {"type": "buy_buttons", "settings": {"show_dynamic_checkout": false, "show_gift_card_recipient": true}}
       },
-      "block_order": ["title", "price", "text", "variant_picker", "buy_buttons", "share"],
+      "block_order": ["title", "price", "text", "variant_picker", "buy_buttons"],
       "custom_css": ["& { scroll-margin-top: 10rem; }"],
       "settings": {"product": "brown-buckleless-belt", "color_scheme": "scheme-product", "secondary_background": false, "media_size": "medium", "constrain_to_viewport": true, "media_fit": "contain", "media_position": "right", "image_zoom": "lightbox", "hide_variants": false, "enable_video_looping": true, "padding_top": 88, "padding_bottom": 88}
     }
