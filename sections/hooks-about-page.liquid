@@ -1,0 +1,64 @@
+{{ 'hooks-pages.css' | asset_url | stylesheet_tag }}
+
+<section class="hooks-page hooks-about-page">
+  <div class="hooks-page-hero">
+    <div class="page-width hooks-page-hero__inner">
+      <p class="hooks-page-eyebrow">{{ section.settings.eyebrow }}</p>
+      <h1 class="hooks-page-title">{{ section.settings.heading }}</h1>
+      <div class="hooks-page-lead">{{ section.settings.intro }}</div>
+    </div>
+  </div>
+
+  <div class="hooks-about-content">
+    <div class="page-width">
+      <div class="hooks-about-story">
+        <h2>{{ section.settings.story_heading }}</h2>
+        <div class="hooks-about-story__text rte">{{ section.settings.story }}</div>
+      </div>
+
+      <div class="hooks-values">
+        {%- for block in section.blocks -%}
+          <article class="hooks-value-card" {{ block.shopify_attributes }}>
+            <span class="hooks-value-card__number">0{{ forloop.index }}</span>
+            <h3>{{ block.settings.heading }}</h3>
+            <div>{{ block.settings.text }}</div>
+          </article>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+
+  <div class="hooks-page-cta">
+    <div class="page-width">
+      <h2>{{ section.settings.cta_heading }}</h2>
+      <a class="button" href="{{ section.settings.cta_link }}">{{ section.settings.cta_label }}</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hooks About page",
+  "settings": [
+    {"type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "About HooksLB"},
+    {"type": "text", "id": "heading", "label": "Heading", "default": "Comfort, without the bulk."},
+    {"type": "richtext", "id": "intro", "label": "Introduction", "default": "<p>HooksLB brings a simpler approach to the everyday belt—secure, adjustable, and comfortably buckle-free.</p>"},
+    {"type": "text", "id": "story_heading", "label": "Story heading", "default": "A small change that makes everyday dressing easier."},
+    {"type": "richtext", "id": "story", "label": "Story", "default": "<p>Traditional buckles can feel bulky, press against the waist, and interrupt the clean line of an outfit. Hooks offers a different solution: a flexible belt that attaches to the side loops and keeps the front free.</p><p>Our focus is straightforward—offer a useful product, make ordering simple, and deliver across Lebanon with the convenience of cash on delivery.</p>"},
+    {"type": "text", "id": "cta_heading", "label": "CTA heading", "default": "Ready to meet your new everyday belt?"},
+    {"type": "text", "id": "cta_label", "label": "CTA label", "default": "Shop Hooks"},
+    {"type": "url", "id": "cta_link", "label": "CTA link", "default": "/#hooks-featured-product"}
+  ],
+  "blocks": [
+    {
+      "type": "value",
+      "name": "Value",
+      "settings": [
+        {"type": "text", "id": "heading", "label": "Heading"},
+        {"type": "text", "id": "text", "label": "Text"}
+      ]
+    }
+  ],
+  "presets": [{"name": "Hooks About page"}]
+}
+{% endschema %}
