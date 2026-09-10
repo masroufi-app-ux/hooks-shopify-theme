@@ -1,1 +1,59 @@
-{"sections":{"image-banner":{"type":"image-banner","blocks":{"heading_M4hXgG":{"type":"heading","settings":{"heading":"The belt without the buckle.","heading_size":"h1"}},"text_j3BNwP":{"type":"text","settings":{"text":"A better fit, without the bulk. Short, premium, and directly communicates what makes Hooks different.","text_style":"body"}},"buttons_CFLk8n":{"type":"buttons","settings":{"button_label_1":"Button label","button_link_1":"","button_style_secondary_1":false,"button_label_2":"Button label","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading_M4hXgG","text_j3BNwP","buttons_CFLk8n"],"settings":{"image":"shopify:\/\/shop_images\/Image1.png","image_overlay_opacity":50,"image_height":"medium","image_behavior":"zoom-in","desktop_content_position":"middle-center","desktop_content_alignment":"center","show_text_box":false,"color_scheme":"scheme-image-banner-brown-button","stack_images_on_mobile":false,"mobile_content_alignment":"center","show_text_below":false}},"featured-product":{"type":"featured-product","blocks":{"title":{"type":"title","settings":{"heading_size":"h2"}},"price":{"type":"price","settings":{}},"text":{"type":"text","settings":{"text":"Enter a description of your featured product. Make sure to mention what makes it special, and what sets it apart from the competition.","text_style":"subtitle"}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button","swatch_shape":"circle"}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":true}},"share":{"type":"share","settings":{"share_label":"Share"}}},"block_order":["title","price","text","variant_picker","buy_buttons","share"],"settings":{"product":"brown-buckleless-belt","color_scheme":"scheme-3","secondary_background":false,"media_size":"small","constrain_to_viewport":true,"media_fit":"contain","media_position":"left","image_zoom":"lightbox","hide_variants":false,"enable_video_looping":true,"padding_top":32,"padding_bottom":48}},"multirow_DUdqtB":{"type":"multirow","blocks":{"row_KedjdY":{"type":"row","settings":{"caption":"Caption","heading":"Row","text":"<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>","button_label":"Button label","button_link":""}},"row_hNxEty":{"type":"row","settings":{"caption":"Caption","heading":"Row","text":"<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>","button_label":"Button label","button_link":""}},"row_BUjWb4":{"type":"row","settings":{"caption":"Caption","heading":"Row","text":"<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>","button_label":"Button label","button_link":""}}},"block_order":["row_KedjdY","row_hNxEty","row_BUjWb4"],"name":"t:sections.multirow.presets.name","settings":{"image_height":"medium","desktop_image_width":"medium","image_layout":"alternate-left","heading_size":"h1","text_style":"body","button_style":"secondary","desktop_content_position":"middle","desktop_content_alignment":"left","mobile_content_alignment":"left","section_color_scheme":"scheme-3","row_color_scheme":"","padding_top":36,"padding_bottom":36}}},"order":["image-banner","featured-product","multirow_DUdqtB"]}
+{
+  "sections": {
+    "image-banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_M4hXgG": {"type": "heading", "settings": {"heading": "The belt without the buckle.", "heading_size": "h1"}},
+        "text_j3BNwP": {"type": "text", "settings": {"text": "Comfortable, adjustable, and smooth under your clothes. Discover the easier way to keep your waistband secure.", "text_style": "body"}},
+        "buttons_CFLk8n": {"type": "buttons", "settings": {"button_label_1": "See how it works", "button_link_1": "#hooks-how-it-works", "button_style_secondary_1": false, "button_label_2": "", "button_link_2": "", "button_style_secondary_2": false}}
+      },
+      "block_order": ["heading_M4hXgG", "text_j3BNwP", "buttons_CFLk8n"],
+      "settings": {"image": "shopify://shop_images/Image1.png", "image_overlay_opacity": 50, "image_height": "medium", "image_behavior": "zoom-in", "desktop_content_position": "middle-center", "desktop_content_alignment": "center", "show_text_box": false, "color_scheme": "scheme-image-banner-brown-button", "stack_images_on_mobile": false, "mobile_content_alignment": "center", "show_text_below": false}
+    },
+    "hooks-benefits": {
+      "type": "hooks-benefits",
+      "blocks": {
+        "benefit_flat": {"type": "benefit", "settings": {"icon": "flat", "heading": "No bulky buckle", "text": "<p>A smooth, flat front that stays comfortable under your clothes.</p>"}},
+        "benefit_stretch": {"type": "benefit", "settings": {"icon": "stretch", "heading": "Comfortable stretch", "text": "<p>Moves with you for an easier fit throughout the day.</p>"}},
+        "benefit_adjust": {"type": "benefit", "settings": {"icon": "adjust", "heading": "Easy to adjust", "text": "<p>Set the fit you want without relying on fixed belt holes.</p>"}},
+        "benefit_easy": {"type": "benefit", "settings": {"icon": "easy", "heading": "Simple to wear", "text": "<p>Attaches to your belt loops and keeps the front free.</p>"}}
+      },
+      "block_order": ["benefit_flat", "benefit_stretch", "benefit_adjust", "benefit_easy"],
+      "settings": {"eyebrow": "Everyday comfort, simplified", "heading": "Why go buckleless?", "color_scheme": "scheme-1"}
+    },
+    "hooks-how": {
+      "type": "hooks-how-it-works",
+      "blocks": {
+        "step_attach": {"type": "step", "settings": {"heading": "Attach", "text": "<p>Fasten each end to the belt loops at the front of your trousers.</p>"}},
+        "step_adjust": {"type": "step", "settings": {"heading": "Adjust", "text": "<p>Slide the adjuster until the waistband feels comfortably secure.</p>"}},
+        "step_go": {"type": "step", "settings": {"heading": "Go buckle-free", "text": "<p>Enjoy a flat front and everyday comfort without opening a buckle.</p>"}}
+      },
+      "block_order": ["step_attach", "step_adjust", "step_go"],
+      "settings": {"eyebrow": "Three simple steps", "heading": "How Hooks works", "text": "<p>The belt keeps your waistband secure while leaving the front comfortably buckle-free.</p>", "button_label": "Meet the Hooks belt", "button_link": "#shopify-section-featured-product", "color_scheme": "scheme-2"}
+    },
+    "hooks-trust": {
+      "type": "hooks-trust-strip",
+      "blocks": {
+        "payment": {"type": "item", "settings": {"icon": "payment", "heading": "Cash on delivery", "text": "Pay when your order arrives."}},
+        "delivery": {"type": "item", "settings": {"icon": "delivery", "heading": "Delivery across Lebanon", "text": "Order from anywhere in Lebanon."}}
+      },
+      "block_order": ["payment", "delivery"],
+      "settings": {"color_scheme": "scheme-4"}
+    },
+    "featured-product": {
+      "type": "featured-product",
+      "blocks": {
+        "title": {"type": "title", "settings": {"heading_size": "h2"}},
+        "price": {"type": "price", "settings": {}},
+        "text": {"type": "text", "settings": {"text": "A flexible, adjustable belt that keeps your waistband secure without a buckle at the front.", "text_style": "subtitle"}},
+        "variant_picker": {"type": "variant_picker", "settings": {"picker_type": "button", "swatch_shape": "circle"}},
+        "buy_buttons": {"type": "buy_buttons", "settings": {"show_dynamic_checkout": false, "show_gift_card_recipient": true}},
+        "share": {"type": "share", "settings": {"share_label": "Share"}}
+      },
+      "block_order": ["title", "price", "text", "variant_picker", "buy_buttons", "share"],
+      "custom_css": ["& { scroll-margin-top: 10rem; }"],
+      "settings": {"product": "brown-buckleless-belt", "color_scheme": "scheme-3", "secondary_background": false, "media_size": "small", "constrain_to_viewport": true, "media_fit": "contain", "media_position": "left", "image_zoom": "lightbox", "hide_variants": false, "enable_video_looping": true, "padding_top": 48, "padding_bottom": 56}
+    }
+  },
+  "order": ["image-banner", "hooks-benefits", "hooks-how", "hooks-trust", "featured-product"]
+}

@@ -1,0 +1,40 @@
+{{ 'hooks-home.css' | asset_url | stylesheet_tag }}
+
+<section id="hooks-how-it-works" class="hooks-how color-{{ section.settings.color_scheme }} gradient" aria-labelledby="HooksHow-{{ section.id }}">
+  <div class="page-width">
+    <div class="hooks-section-heading hooks-section-heading--center">
+      <p class="hooks-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      <h2 id="HooksHow-{{ section.id }}" class="hooks-heading inline-richtext">{{ section.settings.heading }}</h2>
+      <div class="hooks-intro rte">{{ section.settings.text }}</div>
+    </div>
+    <ol class="hooks-step-grid" role="list">
+      {% for block in section.blocks %}
+        <li class="hooks-step" {{ block.shopify_attributes }}>
+          <span class="hooks-step-number" aria-hidden="true">{{ forloop.index }}</span>
+          <h3>{{ block.settings.heading | escape }}</h3>
+          <div class="rte">{{ block.settings.text }}</div>
+        </li>
+      {% endfor %}
+    </ol>
+    {% if section.settings.button_label != blank %}<div class="hooks-how-action"><a class="button" href="{{ section.settings.button_link }}">{{ section.settings.button_label | escape }}</a></div>{% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hooks how it works",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 3,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Three simple steps" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "How Hooks works" },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>The belt keeps your waistband secure while leaving the front comfortably buckle-free.</p>" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Meet the Hooks belt" },
+    { "type": "url", "id": "button_link", "label": "Button link" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-2" }
+  ],
+  "blocks": [{ "type": "step", "name": "Step", "settings": [{ "type": "text", "id": "heading", "label": "Heading", "default": "Attach" }, { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Fasten each end to the belt loops at the front of your trousers.</p>" }] }],
+  "presets": [{ "name": "Hooks how it works", "blocks": [{ "type": "step", "settings": { "heading": "Attach", "text": "<p>Fasten each end to the belt loops at the front of your trousers.</p>" } }, { "type": "step", "settings": { "heading": "Adjust", "text": "<p>Slide the adjuster until the waistband feels comfortably secure.</p>" } }, { "type": "step", "settings": { "heading": "Go buckle-free", "text": "<p>Enjoy a flat front and everyday comfort without opening a buckle.</p>" } }] }]
+}
+{% endschema %}

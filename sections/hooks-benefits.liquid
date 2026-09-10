@@ -1,0 +1,45 @@
+{{ 'hooks-home.css' | asset_url | stylesheet_tag }}
+
+<section class="hooks-benefits color-{{ section.settings.color_scheme }} gradient" aria-labelledby="HooksBenefits-{{ section.id }}">
+  <div class="page-width">
+    <div class="hooks-section-heading">
+      <p class="hooks-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      <h2 id="HooksBenefits-{{ section.id }}" class="hooks-heading inline-richtext">{{ section.settings.heading }}</h2>
+    </div>
+    <div class="hooks-benefit-grid">
+      {% for block in section.blocks %}
+        <article class="hooks-benefit-card" {{ block.shopify_attributes }}>
+          <span class="hooks-benefit-icon" aria-hidden="true">{% case block.settings.icon %}{% when 'flat' %}—{% when 'stretch' %}↔{% when 'adjust' %}◎{% when 'easy' %}✓{% endcase %}</span>
+          <h3>{{ block.settings.heading | escape }}</h3>
+          <div class="rte">{{ block.settings.text }}</div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hooks benefits",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 4,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Everyday comfort, simplified" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Why go buckleless?" },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        { "type": "select", "id": "icon", "label": "Icon", "options": [{ "value": "flat", "label": "Flat" }, { "value": "stretch", "label": "Stretch" }, { "value": "adjust", "label": "Adjust" }, { "value": "easy", "label": "Easy" }], "default": "flat" },
+        { "type": "text", "id": "heading", "label": "Heading", "default": "No bulky buckle" },
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>A smooth, flat front that stays comfortable under your clothes.</p>" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Hooks benefits", "blocks": [{ "type": "benefit", "settings": { "icon": "flat", "heading": "No bulky buckle", "text": "<p>A smooth, flat front that stays comfortable under your clothes.</p>" } }, { "type": "benefit", "settings": { "icon": "stretch", "heading": "Comfortable stretch", "text": "<p>Moves with you for an easier fit throughout the day.</p>" } }, { "type": "benefit", "settings": { "icon": "adjust", "heading": "Easy to adjust", "text": "<p>Set the fit you want without relying on fixed belt holes.</p>" } }, { "type": "benefit", "settings": { "icon": "easy", "heading": "Simple to wear", "text": "<p>Attaches to your belt loops and keeps the front free.</p>" } }] }]
+}
+{% endschema %}

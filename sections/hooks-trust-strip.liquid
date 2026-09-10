@@ -1,0 +1,24 @@
+{{ 'hooks-home.css' | asset_url | stylesheet_tag }}
+
+<aside class="hooks-trust color-{{ section.settings.color_scheme }} gradient" aria-label="Ordering information">
+  <div class="page-width hooks-trust-inner">
+    {% for block in section.blocks %}
+      <div class="hooks-trust-item" {{ block.shopify_attributes }}>
+        <span aria-hidden="true">{% if block.settings.icon == 'payment' %}✓{% else %}→{% endif %}</span>
+        <div><strong>{{ block.settings.heading | escape }}</strong><p>{{ block.settings.text | escape }}</p></div>
+      </div>
+    {% endfor %}
+  </div>
+</aside>
+
+{% schema %}
+{
+  "name": "Hooks ordering info",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 2,
+  "settings": [{ "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-4" }],
+  "blocks": [{ "type": "item", "name": "Item", "settings": [{ "type": "select", "id": "icon", "label": "Icon", "options": [{ "value": "payment", "label": "Payment" }, { "value": "delivery", "label": "Delivery" }], "default": "payment" }, { "type": "text", "id": "heading", "label": "Heading", "default": "Cash on delivery" }, { "type": "text", "id": "text", "label": "Text", "default": "Pay when your order arrives." }] }],
+  "presets": [{ "name": "Hooks ordering info", "blocks": [{ "type": "item", "settings": { "icon": "payment", "heading": "Cash on delivery", "text": "Pay when your order arrives." } }, { "type": "item", "settings": { "icon": "delivery", "heading": "Delivery across Lebanon", "text": "Order from anywhere in Lebanon." } }] }]
+}
+{% endschema %}
