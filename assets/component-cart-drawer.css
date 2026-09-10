@@ -412,3 +412,242 @@ cart-drawer-items::-webkit-scrollbar-track-piece {
     margin-left: 0;
   }
 }
+
+
+/* HooksLB cart drawer */
+.drawer {
+  background-color: rgba(33, 28, 24, 0.58);
+  backdrop-filter: blur(0.4rem);
+}
+
+.drawer__inner {
+  width: 46rem;
+  max-width: 100vw;
+  padding: 0;
+  border: 0;
+  background: #f7f3ec;
+  box-shadow: -1.6rem 0 5rem rgba(36, 30, 25, 0.18);
+}
+
+.drawer__header {
+  padding: 2.4rem;
+  border-bottom: 0.1rem solid rgba(36, 30, 25, 0.1);
+}
+
+.drawer__heading {
+  margin: 0;
+  color: #241e19;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.drawer__close {
+  top: 1.6rem;
+  right: 1.4rem;
+  display: grid;
+  width: 4rem;
+  min-width: 4rem;
+  height: 4rem;
+  min-height: 4rem;
+  place-items: center;
+  border-radius: 50%;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.drawer__close:hover {
+  background: rgba(154, 98, 63, 0.1);
+  transform: rotate(4deg);
+}
+
+.cart-drawer .drawer__cart-items-wrapper {
+  padding: 1.8rem 2.4rem;
+}
+
+.cart-drawer .cart-items thead {
+  display: none;
+}
+
+.cart-drawer .cart-item {
+  grid-template: auto auto / 9rem minmax(0, 1fr) auto;
+  gap: 1.2rem 1.5rem;
+  padding: 1.5rem;
+  border: 0.1rem solid rgba(36, 30, 25, 0.09);
+  border-radius: 1.6rem;
+  background: rgba(255, 255, 255, 0.64);
+  box-shadow: 0 1rem 3rem rgba(36, 30, 25, 0.06);
+}
+
+.cart-drawer .cart-item > td,
+.cart-drawer .cart-item > td + td {
+  padding: 0;
+}
+
+.cart-drawer .cart-item__media {
+  width: 9rem;
+  grid-row: 1 / 3;
+  grid-column: 1;
+}
+
+.cart-drawer .cart-item__image {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 1.2rem;
+  object-fit: cover;
+}
+
+.cart-drawer .cart-item__details {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.cart-drawer .cart-item__totals {
+  grid-row: 1;
+  grid-column: 3;
+  padding-top: 0.2rem;
+}
+
+.cart-drawer .cart-item__name {
+  color: #241e19;
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.cart-drawer .cart-item__details .caption-with-letter-spacing {
+  margin-bottom: 0.5rem;
+  color: #9a623f;
+}
+
+.cart-drawer .cart-items .cart-item__quantity {
+  grid-row: 2;
+  grid-column: 2 / 4;
+  align-self: end;
+}
+
+.cart-drawer .cart-item__quantity-wrapper {
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart-drawer .quantity {
+  width: 12rem;
+  min-height: 4rem;
+  border-radius: 1rem;
+  background: #f7f3ec;
+}
+
+.cart-drawer .quantity::after {
+  border-radius: 1rem;
+  box-shadow: 0 0 0 0.1rem rgba(36, 30, 25, 0.18);
+}
+
+.cart-drawer .quantity__button {
+  width: 3.8rem;
+}
+
+.cart-drawer cart-remove-button .button {
+  width: 4rem;
+  min-width: 4rem;
+  height: 4rem;
+  min-height: 4rem;
+  padding: 0;
+  border-radius: 1rem !important;
+  color: #9a623f;
+}
+
+.drawer__footer {
+  padding: 0 2.4rem 2rem;
+  border-top: 0.1rem solid rgba(36, 30, 25, 0.1);
+  background: #f7f3ec;
+  box-shadow: 0 -1.2rem 3rem rgba(36, 30, 25, 0.04);
+}
+
+.drawer__footer > details {
+  margin-top: 0;
+  border-bottom-color: rgba(36, 30, 25, 0.1);
+}
+
+.drawer__footer summary {
+  padding-block: 1.7rem;
+  color: rgba(36, 30, 25, 0.74);
+}
+
+.cart-drawer__footer {
+  padding-top: 1.8rem;
+}
+
+.cart-drawer .totals {
+  align-items: baseline;
+}
+
+.cart-drawer .totals__total {
+  color: #241e19;
+  font-size: 1.8rem;
+}
+
+.cart-drawer .totals__total-value {
+  color: #241e19;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.cart-drawer .tax-note {
+  margin: 0.8rem 0 1.5rem;
+  color: rgba(36, 30, 25, 0.64);
+  font-size: 1.15rem;
+  text-align: left;
+}
+
+.hooks-cart-assurance {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-bottom: 1.3rem;
+  color: #7a472c;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.cart-drawer .cart__checkout-button {
+  min-height: 5.4rem;
+  border-radius: 1rem !important;
+  background: #9a623f;
+  color: #fffaf4;
+  font-size: 1.6rem;
+}
+
+.cart-drawer .cart__checkout-button:hover {
+  background: #7a472c;
+}
+
+@media screen and (max-width: 480px) {
+  .drawer__inner {
+    width: 100vw;
+  }
+
+  .drawer__header,
+  .cart-drawer .drawer__cart-items-wrapper {
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
+  }
+
+  .drawer__footer {
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
+  }
+
+  .cart-drawer .cart-item {
+    grid-template-columns: 7.6rem minmax(0, 1fr) auto;
+    padding: 1.2rem;
+  }
+
+  .cart-drawer .cart-item__media,
+  .cart-drawer .cart-item__image {
+    width: 7.6rem;
+    height: 7.6rem;
+  }
+
+  .hooks-cart-assurance {
+    font-size: 1.05rem;
+  }
+}
