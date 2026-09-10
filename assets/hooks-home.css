@@ -448,53 +448,8 @@ html {
   align-self: center;
 }
 
-.featured-product .product__info-container {
-  max-width: 48rem;
-  padding: clamp(3rem, 4vw, 4.8rem);
-  border: 0.1rem solid rgba(var(--color-foreground), 0.1);
-  border-radius: 2rem;
-  background: rgba(255, 255, 255, 0.62);
-  box-shadow: 0 2rem 5rem rgba(32, 36, 45, 0.08);
-}
-
-.hooks-product-eyebrow {
-  margin: 0 0 1.2rem;
-  color: rgb(var(--color-button));
-  font-size: 1.15rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.hooks-product-assurance {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 1.6rem;
-}
-
-.hooks-product-assurance span {
-  display: flex;
-  min-height: 7.2rem;
-  padding: 1.3rem;
-  flex-direction: column;
-  justify-content: center;
-  border: 0.1rem solid rgba(var(--color-foreground), 0.1);
-  border-radius: 1rem;
-  color: rgba(var(--color-foreground), 0.68);
-  font-size: 1.2rem;
-  line-height: 1.4;
-}
-
-.hooks-product-assurance strong {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: rgb(var(--color-foreground));
-  font-size: 1.3rem;
-}
-
 .featured-product .product__title h2 {
-  max-width: 36rem;
+  max-width: none;
   font-size: clamp(2.8rem, 3vw, 3.8rem);
   line-height: 1.12;
 }
@@ -554,8 +509,23 @@ html {
     box-shadow: none;
   }
 
+  .featured-product {
+    column-gap: clamp(4rem, 6vw, 7rem);
+  }
+
+  .featured-product.product--medium:not(.product--no-media) .product__media-wrapper,
+  .featured-product.product--medium:not(.product--no-media) .product__info-wrapper {
+    width: calc(50% - 3.5rem);
+    max-width: calc(50% - 3.5rem);
+  }
+
   .featured-product.product--right .product__info-wrapper {
-    padding-right: clamp(2.4rem, 4vw, 5rem);
+    padding: 0 !important;
+  }
+
+  .featured-product .product__info-container {
+    max-width: 46rem;
+    margin-inline: auto;
   }
 }
 
@@ -629,11 +599,6 @@ html {
 
   .featured-product .product__info-container {
     max-width: none;
-    padding: 2.6rem 2.2rem;
-  }
-
-  .hooks-product-assurance {
-    grid-template-columns: 1fr;
   }
 
 }
