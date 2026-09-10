@@ -43,18 +43,16 @@
     "featured-product": {
       "type": "featured-product",
       "blocks": {
-        "eyebrow": {"type": "custom_liquid", "settings": {"custom_liquid": "<p class=\"hooks-product-eyebrow\">Everyday comfort, rethought</p>"}},
         "title": {"type": "title", "settings": {"heading_size": "h2"}},
         "price": {"type": "price", "settings": {}},
-        "text": {"type": "text", "settings": {"text": "One flexible belt, an adjustable fit, and no buckle pressing at the front. Choose your color and make everyday dressing easier.", "text_style": "subtitle"}},
-        "product_points": {"type": "custom_liquid", "settings": {"custom_liquid": "<ul class=\"hooks-product-points\" role=\"list\"><li><span>✓</span> Flat, buckle-free front</li><li><span>✓</span> Flexible adjustable fit</li><li><span>✓</span> Easy everyday wear</li></ul>"}},
+        "text": {"type": "text", "settings": {"text": "A flexible, adjustable belt that keeps your waistband secure without a buckle at the front.", "text_style": "subtitle"}},
         "variant_picker": {"type": "variant_picker", "settings": {"picker_type": "button", "swatch_shape": "circle"}},
         "buy_buttons": {"type": "buy_buttons", "settings": {"show_dynamic_checkout": false, "show_gift_card_recipient": true}},
-        "order_note": {"type": "custom_liquid", "settings": {"custom_liquid": "<div class=\"hooks-order-note\"><span><strong>Cash on delivery</strong> — pay when it arrives</span><span><strong>Lebanon-wide delivery</strong></span></div>"}}
+        "share": {"type": "share", "settings": {"share_label": "Share"}}
       },
-      "block_order": ["eyebrow", "title", "price", "text", "product_points", "variant_picker", "buy_buttons", "order_note"],
+      "block_order": ["title", "price", "text", "variant_picker", "buy_buttons", "share"],
       "custom_css": ["& { scroll-margin-top: 10rem; }"],
-      "settings": {"product": "brown-buckleless-belt", "color_scheme": "scheme-2", "secondary_background": false, "media_size": "medium", "constrain_to_viewport": true, "media_fit": "contain", "media_position": "left", "image_zoom": "lightbox", "hide_variants": false, "enable_video_looping": true, "padding_top": 72, "padding_bottom": 72}
+      "settings": {"product": "brown-buckleless-belt", "color_scheme": "scheme-product", "secondary_background": false, "media_size": "large", "constrain_to_viewport": true, "media_fit": "contain", "media_position": "right", "image_zoom": "lightbox", "hide_variants": false, "enable_video_looping": true, "padding_top": 88, "padding_bottom": 88}
     }
   },
   "order": ["image-banner", "featured-product", "hooks-trust", "hooks-benefits", "hooks-how"]
