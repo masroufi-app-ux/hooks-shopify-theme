@@ -4,11 +4,11 @@
       "type": "image-banner",
       "blocks": {
         "heading_M4hXgG": {"type": "heading", "settings": {"heading": "The belt without the buckle.", "heading_size": "h1"}},
-        "text_j3BNwP": {"type": "text", "settings": {"text": "Comfortable, adjustable, and smooth under your clothes. Discover the easier way to keep your waistband secure.", "text_style": "body"}},
-        "buttons_CFLk8n": {"type": "buttons", "settings": {"button_label_1": "See how it works", "button_link_1": "#hooks-how-it-works", "button_style_secondary_1": false, "button_label_2": "", "button_link_2": "", "button_style_secondary_2": false}}
+        "text_j3BNwP": {"type": "text", "settings": {"text": "Forget the bulk and constant unbuckling. Hooks keeps your waistband secure while the front stays flat and free.", "text_style": "body"}},
+        "buttons_CFLk8n": {"type": "buttons", "settings": {"button_label_1": "See why it works", "button_link_1": "#hooks-how-it-works", "button_style_secondary_1": false, "button_label_2": "Shop Hooks", "button_link_2": "#shopify-section-featured-product", "button_style_secondary_2": true}}
       },
       "block_order": ["heading_M4hXgG", "text_j3BNwP", "buttons_CFLk8n"],
-      "settings": {"image": "shopify://shop_images/Image1.png", "image_overlay_opacity": 50, "image_height": "medium", "image_behavior": "zoom-in", "desktop_content_position": "middle-center", "desktop_content_alignment": "center", "show_text_box": false, "color_scheme": "scheme-image-banner-brown-button", "stack_images_on_mobile": false, "mobile_content_alignment": "center", "show_text_below": false}
+      "settings": {"image": "shopify://shop_images/Image1.png", "image_overlay_opacity": 38, "image_height": "large", "image_behavior": "zoom-in", "desktop_content_position": "middle-left", "desktop_content_alignment": "left", "show_text_box": false, "color_scheme": "scheme-image-banner-brown-button", "stack_images_on_mobile": false, "mobile_content_alignment": "left", "show_text_below": false}
     },
     "hooks-benefits": {
       "type": "hooks-benefits",
@@ -19,7 +19,7 @@
         "benefit_easy": {"type": "benefit", "settings": {"icon": "easy", "heading": "Simple to wear", "text": "<p>Attaches to your belt loops and keeps the front free.</p>"}}
       },
       "block_order": ["benefit_flat", "benefit_stretch", "benefit_adjust", "benefit_easy"],
-      "settings": {"eyebrow": "Everyday comfort, simplified", "heading": "Why go buckleless?", "color_scheme": "scheme-1"}
+      "settings": {"eyebrow": "Less bulk. More comfort.", "heading": "A small switch you'll feel all day.", "color_scheme": "scheme-1"}
     },
     "hooks-how": {
       "type": "hooks-how-it-works",
@@ -29,7 +29,7 @@
         "step_go": {"type": "step", "settings": {"heading": "Go buckle-free", "text": "<p>Enjoy a flat front and everyday comfort without opening a buckle.</p>"}}
       },
       "block_order": ["step_attach", "step_adjust", "step_go"],
-      "settings": {"eyebrow": "Three simple steps", "heading": "How Hooks works", "text": "<p>The belt keeps your waistband secure while leaving the front comfortably buckle-free.</p>", "button_label": "Meet the Hooks belt", "button_link": "#shopify-section-featured-product", "color_scheme": "scheme-2"}
+      "settings": {"eyebrow": "Three simple steps", "heading": "Clip. Adjust. Forget about it.", "text": "<p>Hooks holds your waistband from the sides, so the front stays comfortably buckle-free.</p>", "button_label": "Meet the Hooks belt", "button_link": "#shopify-section-featured-product", "color_scheme": "scheme-2"}
     },
     "hooks-trust": {
       "type": "hooks-trust-strip",
@@ -38,21 +38,21 @@
         "delivery": {"type": "item", "settings": {"icon": "delivery", "heading": "Delivery across Lebanon", "text": "Order from anywhere in Lebanon."}}
       },
       "block_order": ["payment", "delivery"],
-      "settings": {"color_scheme": "scheme-4"}
+      "settings": {"color_scheme": "scheme-5"}
     },
     "featured-product": {
       "type": "featured-product",
       "blocks": {
         "title": {"type": "title", "settings": {"heading_size": "h2"}},
         "price": {"type": "price", "settings": {}},
-        "text": {"type": "text", "settings": {"text": "A flexible, adjustable belt that keeps your waistband secure without a buckle at the front.", "text_style": "subtitle"}},
+        "text": {"type": "text", "settings": {"text": "One flexible belt, an adjustable fit, and no buckle pressing at the front. Choose your color and make everyday dressing easier.", "text_style": "subtitle"}},
         "variant_picker": {"type": "variant_picker", "settings": {"picker_type": "button", "swatch_shape": "circle"}},
         "buy_buttons": {"type": "buy_buttons", "settings": {"show_dynamic_checkout": false, "show_gift_card_recipient": true}},
         "share": {"type": "share", "settings": {"share_label": "Share"}}
       },
       "block_order": ["title", "price", "text", "variant_picker", "buy_buttons", "share"],
       "custom_css": ["& { scroll-margin-top: 10rem; }"],
-      "settings": {"product": "brown-buckleless-belt", "color_scheme": "scheme-3", "secondary_background": false, "media_size": "small", "constrain_to_viewport": true, "media_fit": "contain", "media_position": "left", "image_zoom": "lightbox", "hide_variants": false, "enable_video_looping": true, "padding_top": 48, "padding_bottom": 56}
+      "settings": {"product": "brown-buckleless-belt", "color_scheme": "scheme-1", "secondary_background": false, "media_size": "small", "constrain_to_viewport": true, "media_fit": "contain", "media_position": "left", "image_zoom": "lightbox", "hide_variants": false, "enable_video_looping": true, "padding_top": 72, "padding_bottom": 80}
     }
   },
   "order": ["image-banner", "hooks-benefits", "hooks-how", "hooks-trust", "featured-product"]
