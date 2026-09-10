@@ -26,7 +26,9 @@
         }
       },
       "block_order": ["value_simple", "value_comfort", "value_local"],
-      "settings": {}
+      "settings": {
+        "cta_link": "/#hooks-featured-product"
+      }
     }
   },
   "order": ["main"]
