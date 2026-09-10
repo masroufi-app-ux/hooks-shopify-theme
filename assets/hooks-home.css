@@ -4,6 +4,15 @@
   --hooks-shadow: 0 2.4rem 6rem rgba(36, 30, 25, 0.1);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+#hooks-how-it-works,
+#shopify-section-featured-product {
+  scroll-margin-top: 10rem;
+}
+
 .announcement-bar__message {
   padding-block: 0.9rem;
   font-size: 1.15rem;
@@ -427,6 +436,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .button,
   .header__icon,
   .hooks-benefit-card,
