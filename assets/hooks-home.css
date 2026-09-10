@@ -29,6 +29,46 @@ html {
   max-width: 140rem;
 }
 
+.hooks-primary-nav {
+  display: flex;
+  grid-area: navigation;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2.4rem, 3vw, 4.4rem);
+}
+
+.hooks-primary-nav a {
+  position: relative;
+  padding: 1rem 0;
+  color: #fffaf4;
+  font-size: 1.45rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.hooks-primary-nav a::after {
+  position: absolute;
+  right: 0;
+  bottom: 0.5rem;
+  left: 0;
+  height: 0.15rem;
+  background: currentColor;
+  content: "";
+  opacity: 0;
+  transform: scaleX(0.4);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.hooks-primary-nav a:hover::after,
+.hooks-primary-nav a.is-active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.hooks-mobile-nav {
+  display: none;
+}
+
 .header__heading-link .h2 {
   font-family: var(--font-body-family);
   font-size: 2.1rem;
@@ -573,6 +613,11 @@ html {
 }
 
 @media screen and (min-width: 990px) {
+  .header {
+    grid-template-areas: "heading navigation icons";
+    grid-template-columns: auto 1fr auto;
+  }
+
   .footer__newsletter {
     max-width: 100rem;
   }
@@ -633,6 +678,65 @@ html {
 }
 
 @media screen and (max-width: 989px) {
+  .hooks-primary-nav {
+    display: none;
+  }
+
+  .hooks-mobile-nav {
+    position: relative;
+    z-index: 5;
+    display: block;
+    grid-area: left-icons;
+    justify-self: start;
+  }
+
+  .hooks-mobile-nav summary {
+    display: flex;
+    width: 4.4rem;
+    height: 4.4rem;
+    padding: 1.2rem 1rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.45rem;
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .hooks-mobile-nav summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .hooks-mobile-nav summary span {
+    display: block;
+    width: 2.2rem;
+    height: 0.15rem;
+    background: #fffaf4;
+  }
+
+  .hooks-mobile-nav nav {
+    position: absolute;
+    top: calc(100% + 1.2rem);
+    left: 0;
+    display: grid;
+    width: min(28rem, calc(100vw - 3rem));
+    padding: 1rem;
+    border-radius: 1.2rem;
+    background: #f7f3ec;
+    box-shadow: 0 1.6rem 4rem rgba(36, 30, 25, 0.2);
+  }
+
+  .hooks-mobile-nav nav a {
+    padding: 1.3rem 1.4rem;
+    border-radius: 0.8rem;
+    color: #241e19;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .hooks-mobile-nav nav a:hover {
+    background: #ede1d2;
+  }
+
   .hooks-benefit-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
