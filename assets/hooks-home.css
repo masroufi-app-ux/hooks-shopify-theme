@@ -535,15 +535,33 @@ html {
   border-top: 0;
 }
 
+.footer-block__newsletter {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .footer__newsletter {
+  width: 100%;
   max-width: 58rem;
+  margin-inline: auto;
 }
 
 .footer-block__newsletter .footer-block__heading {
   max-width: 56rem;
+  margin-inline: auto;
   font-size: clamp(2.6rem, 4vw, 4.2rem);
   line-height: 1.12;
+  text-align: center;
   text-wrap: balance;
+}
+
+.footer-block__newsletter .newsletter-form,
+.footer-block__newsletter .newsletter-form__field-wrapper {
+  width: 100%;
+  margin-inline: auto;
 }
 
 .newsletter-form__field-wrapper .field__input {
