@@ -573,6 +573,20 @@ html {
 }
 
 @media screen and (min-width: 990px) {
+  .footer__newsletter {
+    max-width: 100rem;
+  }
+
+  .footer-block__newsletter .footer-block__heading {
+    max-width: none;
+    white-space: nowrap;
+  }
+
+  .footer-block__newsletter .newsletter-form,
+  .footer-block__newsletter .newsletter-form__field-wrapper {
+    max-width: 36rem;
+  }
+
   .banner__content {
     justify-content: center !important;
   }
