@@ -701,6 +701,12 @@ html {
 }
 
 @media screen and (max-width: 989px) {
+  .header {
+    grid-template-areas: 'left-icons heading icons' !important;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) !important;
+    align-items: center;
+  }
+
   .hooks-primary-nav {
     display: none;
   }
@@ -708,6 +714,10 @@ html {
   .header > header-drawer,
   .header > .header__search {
     display: none !important;
+  }
+
+  .header .header__icons > .header__search {
+    display: inline-flex !important;
   }
 
   .hooks-mobile-nav {
