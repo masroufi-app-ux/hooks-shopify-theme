@@ -275,7 +275,14 @@
 .product--thumbnail_slider .thumbnail-slider {
   box-sizing: border-box;
   width: fit-content !important;
-  padding: 0.8rem 1.2rem !important;
+  margin-inline: auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.product--thumbnail_slider .thumbnail-slider > .slider-button {
+  display: none !important;
 }
 
 .product--thumbnail_slider .thumbnail-list,
@@ -286,11 +293,15 @@
   grid-auto-columns: 1rem;
   align-items: center;
   gap: 2rem !important;
-  width: auto !important;
+  box-sizing: border-box;
+  width: fit-content !important;
   min-width: 0 !important;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 0.8rem 1.2rem !important;
   overflow: visible !important;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  border-radius: 999rem;
+  background: rgba(var(--color-background), 0.72);
 }
 
 .product--thumbnail_slider .thumbnail-list__item,
