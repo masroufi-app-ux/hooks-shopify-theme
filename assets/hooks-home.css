@@ -732,6 +732,10 @@ html {
     display: inline-flex !important;
   }
 
+  .hooks-mobile-actions > .header__search .header__icon-close {
+    display: none !important;
+  }
+
   .hooks-mobile-actions .search-modal {
     top: 100%;
     bottom: auto;
