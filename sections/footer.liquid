@@ -159,6 +159,50 @@
           </div>
         {%- endif -%}
 
+        <div class="hooks-footer-main">
+          <div class="hooks-footer-brand">
+            <a href="{{ routes.root_url }}" class="hooks-footer-brand__link" aria-label="HooksLB home">
+              <img
+                src="{{ 'hooks-logo-white.png' | asset_url }}"
+                width="48"
+                height="45"
+                alt=""
+                loading="lazy"
+                class="hooks-footer-brand__mark"
+              >
+            </a>
+            <p class="hooks-footer-brand__text">
+              Everyday comfort without the bulky buckle. Simple, adjustable, and made to move with you.
+            </p>
+            <div class="hooks-footer-assurances" aria-label="Store benefits">
+              <span>Cash on delivery</span>
+              <span>Delivery across Lebanon</span>
+            </div>
+          </div>
+
+          <nav class="hooks-footer-links" aria-label="Footer navigation">
+            <div>
+              <h2 class="hooks-footer-links__heading">Explore</h2>
+              <ul class="list-unstyled">
+                <li><a href="{{ routes.root_url }}">Home</a></li>
+                <li><a href="{{ routes.root_url }}#hooks-featured-product">Shop belts</a></li>
+                <li><a href="{{ routes.root_url }}#hooks-how-it-works">How it works</a></li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="hooks-footer-links__heading">Shop &amp; support</h2>
+              <ul class="list-unstyled">
+                {%- assign hooks_product = all_products['brown-buckleless-belt'] -%}
+                {%- if hooks_product != blank -%}
+                  <li><a href="{{ hooks_product.url }}">Product details</a></li>
+                {%- endif -%}
+                <li><a href="/pages/about-us">About Us</a></li>
+                <li><a href="/pages/contact-us">Contact Us</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
         <div
           class="footer-block--newsletter{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
           {% if settings.animations_reveal_on_scroll %}
