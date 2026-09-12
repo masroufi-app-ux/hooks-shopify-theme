@@ -4,15 +4,26 @@
 
 .hooks-page-hero {
   position: relative;
+  isolation: isolate;
   display: grid;
   min-height: clamp(42rem, 48vw, 66rem);
   padding: clamp(7rem, 10vw, 12rem) 0;
   place-items: center;
   overflow: hidden;
-  background:
-    linear-gradient(rgba(58, 38, 27, 0.58), rgba(58, 38, 27, 0.58)),
-    url('hooks-about-hero.png') center center / cover no-repeat;
+  background-image: url('hooks-about-hero.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
+}
+
+.hooks-page-hero::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.38);
+  pointer-events: none;
 }
 
 .hooks-page-hero__inner {
@@ -22,7 +33,7 @@
   margin-inline: auto;
 }
 
- .hooks-page-eyebrow {
+.hooks-page-eyebrow {
   margin: 0 0 1.4rem;
   color: #fffaf4;
   font-size: 1.2rem;
