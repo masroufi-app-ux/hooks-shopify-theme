@@ -705,6 +705,11 @@ html {
     display: none;
   }
 
+  .header > header-drawer,
+  .header > .header__search {
+    display: none !important;
+  }
+
   .hooks-mobile-nav {
     position: relative;
     z-index: 5;
