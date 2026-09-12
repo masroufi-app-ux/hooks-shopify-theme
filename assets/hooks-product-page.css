@@ -1,45 +1,45 @@
 /* Product detail gallery */
-.template-product .product--thumbnail_slider .product__media-wrapper {
+.product--thumbnail_slider .product__media-wrapper {
   position: relative;
 }
 
 @media screen and (min-width: 750px) {
-  .template-product .product--thumbnail_slider .product__media-list {
+  .product--thumbnail_slider .product__media-list {
     margin: 0;
   }
 
-  .template-product .product--thumbnail_slider .product__media-item {
+  .product--thumbnail_slider .product__media-item {
     width: 100%;
   }
 }
 
-.template-product .product--thumbnail_slider .product__media {
+.product--thumbnail_slider .product__media {
   overflow: hidden;
   border-radius: 2rem;
 }
 
-.template-product .product--thumbnail_slider .thumbnail-slider {
+.product--thumbnail_slider .thumbnail-slider {
   justify-content: center;
   margin-top: 1.8rem;
 }
 
-.template-product .product--thumbnail_slider .thumbnail-slider > .slider-button {
+.product--thumbnail_slider .thumbnail-slider > .slider-button {
   display: none;
 }
 
-.template-product .product--thumbnail_slider .thumbnail-list {
+.product--thumbnail_slider .thumbnail-list {
   flex: 0 1 auto;
   justify-content: center;
   gap: 0.9rem;
   width: auto;
 }
 
-.template-product .product--thumbnail_slider .thumbnail-list__item.slider__slide {
+.product--thumbnail_slider .thumbnail-list__item.slider__slide {
   flex: 0 0 auto;
   width: auto;
 }
 
-.template-product .product--thumbnail_slider .thumbnail {
+.product--thumbnail_slider .thumbnail {
   width: 0.9rem;
   height: 0.9rem;
   min-height: 0;
@@ -52,13 +52,13 @@
   transition: width 180ms ease, background 180ms ease;
 }
 
-.template-product .product--thumbnail_slider .thumbnail[aria-current='true'] {
+.product--thumbnail_slider .thumbnail[aria-current='true'] {
   width: 2.6rem;
   background: rgb(var(--color-button));
 }
 
-.template-product .product--thumbnail_slider .thumbnail img,
-.template-product .product--thumbnail_slider .thumbnail__badge {
+.product--thumbnail_slider .thumbnail img,
+.product--thumbnail_slider .thumbnail__badge {
   display: none;
 }
 
@@ -199,7 +199,7 @@
     max-width: none;
   }
 
-  .template-product .product--thumbnail_slider .product__media {
+  .product--thumbnail_slider .product__media {
     border-radius: 1.4rem;
   }
 }
