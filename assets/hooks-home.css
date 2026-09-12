@@ -65,7 +65,8 @@ html {
   transform: scaleX(1);
 }
 
-.hooks-mobile-nav {
+.hooks-mobile-nav,
+.hooks-mobile-actions {
   display: none;
 }
 
@@ -702,6 +703,7 @@ html {
 
 @media screen and (max-width: 989px) {
   .header {
+    position: relative;
     grid-template-areas: 'left-icons heading icons' !important;
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) !important;
     align-items: center;
@@ -709,23 +711,37 @@ html {
 
   .hooks-primary-nav {
     display: none;
-  }
+ _STA
 
   .header > header-drawer,
-  .header > .header__search {
+  .header > .header__search,
+  .header__icons > .header__search {
     display: none !important;
   }
 
-  .header .header__icons > .header__search {
+  .hooks-mobile-actions {
+    z-index: 5;
+    display: flex;
+    grid-area: left-icons;
+    align-items: center;
+    justify-self: start;
+  }
+
+  .hooks-mobile-actions > .header__search {
     display: inline-flex !important;
+  }
+
+  .hooks-mobile-actions .search-modal {
+    top: 100%;
+    bottom: auto;
+    width: 100%;
+    height: 7.2rem;
+    min-height: 7.2rem;
   }
 
   .hooks-mobile-nav {
     position: relative;
-    z-index: 5;
     display: block;
-    grid-area: left-icons;
-    justify-self: start;
   }
 
   .hooks-mobile-nav summary {
