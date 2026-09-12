@@ -29,7 +29,7 @@
         "step_go": {"type": "step", "settings": {"heading": "Go buckle-free", "text": "<p>Enjoy a flat front and everyday comfort without opening a buckle.</p>"}}
       },
       "block_order": ["step_attach", "step_adjust", "step_go"],
-      "settings": {"eyebrow": "Three simple steps", "heading": "Clip. Adjust. Forget about it.", "text": "<p>Hooks holds your waistband from the sides, so the front stays comfortably buckle-free.</p>", "button_label": "Meet the Hooks belt", "button_link": "#shopify-section-featured-product", "color_scheme": "scheme-2"}
+      "settings": {"eyebrow": "Three simple steps", "heading": "Clip. Adjust. Forget about it.", "text": "<p>Hooks holds your waistband from the sides, so the front stays comfortably buckle-free.</p>", "button_label": "Meet the Hooks belt", "button_link": "#hooks-featured-product", "color_scheme": "scheme-2"}
     },
     "hooks-trust": {
       "type": "hooks-trust-strip",
