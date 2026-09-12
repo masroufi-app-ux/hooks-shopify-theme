@@ -3,19 +3,28 @@
 }
 
 .hooks-page-hero {
+  position: relative;
+  display: grid;
+  min-height: clamp(42rem, 48vw, 66rem);
   padding: clamp(7rem, 10vw, 12rem) 0;
-  background: #ede1d2;
+  place-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(58, 38, 27, 0.58), rgba(58, 38, 27, 0.58)),
+    url('hooks-about-hero.png') center center / cover no-repeat;
   text-align: center;
 }
 
 .hooks-page-hero__inner {
+  position: relative;
+  z-index: 1;
   max-width: 82rem;
   margin-inline: auto;
 }
 
-.hooks-page-eyebrow {
+ .hooks-page-eyebrow {
   margin: 0 0 1.4rem;
-  color: #9a623f;
+  color: #fffaf4;
   font-size: 1.2rem;
   font-weight: 800;
   letter-spacing: 0.16em;
@@ -24,7 +33,7 @@
 
 .hooks-page-title {
   margin: 0;
-  color: #241e19;
+  color: #ffffff;
   font-size: clamp(4.2rem, 7vw, 7.2rem);
   line-height: 1;
   letter-spacing: -0.035em;
@@ -33,7 +42,7 @@
 .hooks-page-lead {
   max-width: 66rem;
   margin: 2.2rem auto 0;
-  color: rgba(36, 30, 25, 0.72);
+  color: rgba(255, 255, 255, 0.9);
   font-size: clamp(1.7rem, 2vw, 2rem);
   line-height: 1.7;
 }
