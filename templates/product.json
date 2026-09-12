@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -69,13 +78,72 @@
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "show",
         "media_position": "left",
         "image_zoom": "lightbox",
-        "mobile_thumbnails": "show",
         "hide_variants": false,
         "enable_video_looping": false,
         "padding_top": 52,
         "padding_bottom": 24
+      }
+    },
+    "hooks-product-story": {
+      "type": "hooks-product-story",
+      "blocks": {
+        "comfort": {
+          "type": "image_text",
+          "settings": {
+            "image": "shopify://shop_images/Frame_3_523eefc1-dfe4-42ac-8714-4845d016a6a4.png",
+            "media_position": "left",
+            "heading": "Comfort that moves with you.",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "image_text_XCLT6f": {
+          "type": "image_text",
+          "settings": {
+            "image": "shopify://shop_images/Frame_2.png",
+            "media_position": "right",
+            "heading": "Comfort that moves with you.",
+            "text": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "demonstration": {
+          "type": "video",
+          "settings": {
+            "external_video": "",
+            "heading": "See Hooks in action.",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "comfort",
+        "image_text_XCLT6f",
+        "demonstration"
+      ],
+      "settings": {
+        "eyebrow": "Explore the details",
+        "heading": "A closer look at Hooks.",
+        "text": "",
+        "color_scheme": "scheme-1",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "disclosures": {
+      "type": "disclosures",
+      "settings": {
+        "heading": "Disclosures",
+        "heading_size": "h2",
+        "open_by_default": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 0
       }
     },
     "related-products": {
@@ -85,54 +153,15 @@
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
+        "columns_mobile": "2",
         "color_scheme": "scheme-1",
         "image_ratio": "square",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 28
-      }
-    },
-    "disclosures": {
-      "type": "disclosures",
-      "settings": {
-        "padding_top": 36,
-        "padding_bottom": 0
-      }
-    },
-    "hooks-product-story": {
-      "type": "hooks-product-story",
-      "blocks": {
-        "comfort": {
-          "type": "image_text",
-          "settings": {
-            "heading": "Comfort that moves with you.",
-            "text": "<p>Add a lifestyle image here and explain how the buckleless design stays comfortable throughout the day.</p>",
-            "media_position": "left"
-          }
-        },
-        "demonstration": {
-          "type": "video",
-          "settings": {
-            "heading": "See Hooks in action.",
-            "text": "<p>Add your product video here to show customers how to attach, adjust, and wear the belt.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "comfort",
-        "demonstration"
-      ],
-      "settings": {
-        "eyebrow": "Explore the details",
-        "heading": "A closer look at Hooks.",
-        "text": "<p>Use these flexible sections to explain the product with your own images and video.</p>",
-        "color_scheme": "scheme-1",
-        "padding_top": 72,
-        "padding_bottom": 72
       }
     }
   },
