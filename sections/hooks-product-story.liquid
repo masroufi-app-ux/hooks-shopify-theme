@@ -1,0 +1,218 @@
+{{ 'hooks-product-page.css' | asset_url | stylesheet_tag }}
+
+<section class="hooks-product-story color-{{ section.settings.color_scheme }} gradient">
+  <div class="page-width hooks-product-story__inner section-{{ section.id }}-padding">
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.text != blank -%}
+      <header class="hooks-product-story__header">
+        {%- if section.settings.eyebrow != blank -%}
+          <p class="hooks-product-story__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h2>{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.text != blank -%}
+          <div class="hooks-product-story__intro rte">{{ section.settings.text }}</div>
+        {%- endif -%}
+      </header>
+    {%- endif -%}
+
+    <div class="hooks-product-story__blocks">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'image_text' -%}
+            <article class="hooks-story-row hooks-story-row--{{ block.settings.media_position }}" {{ block.shopify_attributes }}>
+              {%- if block.settings.image != blank -%}
+                <div class="hooks-story-row__media">
+                  {{
+                    block.settings.image
+                    | image_url: width: 1800
+                    | image_tag:
+                      loading: 'lazy',
+                      widths: '480, 720, 960, 1200, 1600, 1800',
+                      sizes: '(min-width: 990px) 55vw, 100vw',
+                      alt: block.settings.image.alt
+                  }}
+                </div>
+              {%- endif -%}
+              <div class="hooks-story-row__content{% if block.settings.image == blank %} hooks-story-row__content--full{% endif %}">
+                {%- if block.settings.heading != blank -%}<h3>{{ block.settings.heading }}</h3>{%- endif -%}
+                {%- if block.settings.text != blank -%}<div class="rte">{{ block.settings.text }}</div>{%- endif -%}
+                {%- if block.settings.button_label != blank and block.settings.button_link != blank -%}
+                  <a class="button button--secondary" href="{{ block.settings.button_link }}">{{ block.settings.button_label | escape }}</a>
+                {%- endif -%}
+              </div>
+            </article>
+
+          {%- when 'video' -%}
+            <article class="hooks-story-video" {{ block.shopify_attributes }}>
+              <div class="hooks-story-video__copy">
+                {%- if block.settings.heading != blank -%}<h3>{{ block.settings.heading }}</h3>{%- endif -%}
+                {%- if block.settings.text != blank -%}<div class="rte">{{ block.settings.text }}</div>{%- endif -%}
+              </div>
+              {%- if block.settings.video != blank or block.settings.external_video != blank -%}
+                <div class="hooks-story-video__media">
+                  {%- if block.settings.video != blank -%}
+                    {{ block.settings.video | video_tag: image_size: '1600x', controls: true, autoplay: false, loop: false }}
+                  {%- elsif block.settings.external_video != blank -%}
+                    {{ block.settings.external_video | external_video_url: autoplay: false | external_video_tag }}
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            </article>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "Hooks product story",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 8,
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Explore the details"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "A closer look at Hooks."
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Introduction",
+      "default": "<p>Explain the product with images, text, and video.</p>"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 72
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_text",
+      "name": "Image with text",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "select",
+          "id": "media_position",
+          "label": "Image position",
+          "default": "left",
+          "options": [
+            {"value": "left", "label": "Left"},
+            {"value": "right", "label": "Right"}
+          ]
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Designed for everyday comfort."
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Describe this product detail and why it matters to the customer.</p>"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    },
+    {
+      "type": "video",
+      "name": "Video with text",
+      "settings": [
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Shopify-hosted video"
+        },
+        {
+          "type": "video_url",
+          "id": "external_video",
+          "label": "YouTube or Vimeo URL",
+          "accept": ["youtube", "vimeo"]
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "label": "Heading",
+          "default": "See Hooks in action."
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Show customers how to attach, adjust, and wear the belt.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hooks product story",
+      "blocks": [
+        {"type": "image_text"},
+        {"type": "video"}
+      ]
+    }
+  ]
+}
+{% endschema %}

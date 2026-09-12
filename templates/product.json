@@ -68,7 +68,7 @@
         "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "show",
@@ -102,10 +102,43 @@
         "padding_top": 36,
         "padding_bottom": 0
       }
+    },
+    "hooks-product-story": {
+      "type": "hooks-product-story",
+      "blocks": {
+        "comfort": {
+          "type": "image_text",
+          "settings": {
+            "heading": "Comfort that moves with you.",
+            "text": "<p>Add a lifestyle image here and explain how the buckleless design stays comfortable throughout the day.</p>",
+            "media_position": "left"
+          }
+        },
+        "demonstration": {
+          "type": "video",
+          "settings": {
+            "heading": "See Hooks in action.",
+            "text": "<p>Add your product video here to show customers how to attach, adjust, and wear the belt.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "comfort",
+        "demonstration"
+      ],
+      "settings": {
+        "eyebrow": "Explore the details",
+        "heading": "A closer look at Hooks.",
+        "text": "<p>Use these flexible sections to explain the product with your own images and video.</p>",
+        "color_scheme": "scheme-1",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
     }
   },
   "order": [
     "main",
+    "hooks-product-story",
     "disclosures",
     "related-products"
   ]
