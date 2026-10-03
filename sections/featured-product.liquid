@@ -173,6 +173,9 @@
                       price_class: 'price--large'
                     -%}
                   </div>
+                  {%- unless placeholder -%}
+                    <p class="hooks-pack-price-note">Includes 2 belt pieces</p>
+                  {%- endunless -%}
                   {%- if product.quantity_price_breaks_configured? -%}
                     <div class="volume-pricing-note" id="Volume-Note-{{ section.id }}">
                       <span>{{ 'products.product.volume_pricing.note' | t }}</span>
