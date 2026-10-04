@@ -820,6 +820,19 @@ html {
     padding-block: 1rem;
   }
 
+  /* Keep the homepage hero equal to the visible mobile viewport on every device. */
+  [id^='Banner-'][id$='__image-banner'] {
+    min-height: 100vh !important;
+    min-height: 100svh !important;
+    min-height: 100dvh !important;
+  }
+
+  [id^='Banner-'][id$='__image-banner'] .banner__content {
+    min-height: 100vh !important;
+    min-height: 100svh !important;
+    min-height: 100dvh !important;
+  }
+
   .banner::after {
     background: linear-gradient(0deg, rgba(25, 18, 13, 0.82) 0%, rgba(25, 18, 13, 0.48) 70%, rgba(25, 18, 13, 0.34) 100%) !important;
   }
