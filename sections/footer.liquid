@@ -349,6 +349,9 @@
         {%- if section.settings.show_policy -%}
           <ul class="policies list-unstyled">
             {%- for policy in shop.policies -%}
+              {%- if policy.url contains '/contact-information' -%}
+                {%- continue -%}
+              {%- endif -%}
               {%- if policy != blank -%}
                 <li>
                   <small class="copyright__content"
