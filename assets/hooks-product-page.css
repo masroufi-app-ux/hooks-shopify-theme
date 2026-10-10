@@ -344,3 +344,19 @@
   background: #b06d47 !important;
   box-shadow: 0 0 0 0.4rem rgba(176, 109, 71, 0.16) !important;
 }
+
+/* Cancel Shopify's edge-to-edge mobile gutters inside the rounded gallery. */
+@media screen and (max-width: 749px) {
+  .product--thumbnail_slider .product__media-wrapper slider-component[id^='GalleryViewer-'] {
+    box-sizing: border-box;
+    width: 100%;
+    margin-inline: 0;
+  }
+  .product--thumbnail_slider .product__media-list.slider {
+    box-sizing: border-box;
+    width: 100%;
+    margin-inline: 0;
+    padding-inline: 0;
+    scroll-padding-left: 0;
+  }
+}
