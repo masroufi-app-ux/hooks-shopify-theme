@@ -838,7 +838,7 @@ html {
   }
 
   .banner__content {
-    align-items: flex-end !important;
+    align-items: center !important;
     padding: 3rem 2rem !important;
   }
 
@@ -948,4 +948,23 @@ html {
 }
 #MainContent .shopify-policy__body li + li {
   margin-top: 10px;
+}
+
+/* Keep the two-piece note close to the price on both product sections. */
+.product__info-container .hooks-pack-price-note {
+  margin-block: 0.6rem !important;
+}
+.product__info-container .hooks-pack-price-note + div {
+  margin-block: 0 !important;
+}
+#hooks-featured-product .product__title > a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+#hooks-featured-product .hooks-product-gallery__slide,
+#hooks-featured-product .product__text,
+#hooks-featured-product [id^='price-'],
+#hooks-featured-product .hooks-pack-price-note {
+  cursor: pointer;
 }
