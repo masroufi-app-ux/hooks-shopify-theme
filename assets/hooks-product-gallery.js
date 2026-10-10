@@ -24,7 +24,10 @@ if (!customElements.get('hooks-product-gallery')) {
         this.addEventListener('touchend', (event) => {
           if (this.startX === null) return;
           const distance = (event.changedTouches[0]?.clientX ?? this.startX) - this.startX;
-          if (Math.abs(distance) > 45) this.show(this.index + (distance < 0 ? 1 : -1));
+          if (Math.abs(distance) > 45) {
+            this.suppressNavigationUntil = Date.now() + 400;
+            this.show(this.index + (distance < 0 ? 1 : -1));
+          }
           this.startX = null;
         }, { passive: true });
       }
@@ -46,3 +49,14 @@ if (!customElements.get('hooks-product-gallery')) {
     }
   );
 }
+
+/* Open featured product details without intercepting purchase or gallery controls. */
+document.addEventListener('click', (event) => {
+  const section = event.target.closest('#hooks-featured-product');
+  if (!section || event.defaultPrevented) return;
+  if (event.target.closest('a, button, input, select, textarea, label, form, variant-selects, [data-gallery-dot]')) return;
+  if (window.getSelection()?.toString()) return;
+  const gallery = section.querySelector('hooks-product-gallery');
+  if (gallery?.suppressNavigationUntil > Date.now()) return;
+  if (section.dataset.url) window.location.assign(section.dataset.url);
+});
